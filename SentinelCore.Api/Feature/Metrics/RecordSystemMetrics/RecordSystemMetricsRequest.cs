@@ -1,3 +1,5 @@
+using SentinelCore.Api.Common.Abstractions;
+
 namespace SentinelCore.Api.Feature.Metrics.RecordSystemMetrics;
 
 public record RecordSystemMetricsRequest(
@@ -7,4 +9,4 @@ public record RecordSystemMetricsRequest(
 	double CpuUsage,
 	double MemoryUsage,
 	DateTimeOffset Timestamp
-);
+) : IRequest<RecordSystemMetricsResponse>;

@@ -11,7 +11,7 @@ public class SystemMetrics {
 	
 	private SystemMetrics() { }
 	
-	public SystemMetrics(Guid agentId, string hostName, string operatingSystem, double cpuUsage, double memoryUsage, DateTime timestamp) {
+	public SystemMetrics(Guid agentId, string hostName, string operatingSystem, double cpuUsage, double memoryUsage, DateTimeOffset timestamp) {
 		if (cpuUsage < 0 || cpuUsage > 100)
 			throw new ArgumentOutOfRangeException(nameof(cpuUsage), "CPU usage must be between 0 and 100.");
 
