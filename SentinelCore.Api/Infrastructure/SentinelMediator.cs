@@ -14,6 +14,6 @@ public class SentinelMediator : ISentinelMediator {
 
 		var handlerType = typeof(ICommonHandler<,>).MakeGenericType(requestType, typeof(TResponse));
 		dynamic handler = _serviceProvider.GetRequiredService(handlerType);
-		return await handler.HandleAsync((dynamic)request, ct);
+		return await handler.HandlerAsync((dynamic)request, ct);
 	}
 }

@@ -1,0 +1,5 @@
+services:
+  sentinel-db:
+    image: postgres:16-alpine
+    container_name: sentinel_db
+    
